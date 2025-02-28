@@ -1,7 +1,6 @@
-/* Body */
+/* General Styling */
 .body-class {
-    background-color: #D3D3D3; /* Subtle background color */
-    color: #333333;
+    background-color: #f5f5f5;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -9,103 +8,101 @@
 
 /* Header */
 .header-class {
-    background-color: #1A2A3D; /* Contrasting background */
-    color: #FFFFFF; /* Improved visibility */
+    background-color: #003366;
+    color: white;
     text-align: center;
     padding: 20px;
 }
 
 /* Navigation */
 .nav-class {
-    background-color: #1A2A3D;
-    text-align: center;
+    background-color: #00509E;
     padding: 10px;
+    text-align: center;
+}
+
+.nav-class ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-class li {
+    display: inline;
+    margin: 0 15px;
 }
 
 .nav-class a {
-    color: #FFFFFF;
+    color: white;
     text-decoration: none;
-    padding: 10px;
-}
-
-.nav-class a:hover {
-    background-color: #ADD8E6;
+    font-weight: normal;
 }
 
 .nav-class .active {
-    font-weight: bold; /* Make active page link bold */
+    font-weight: bold;
 }
 
 /* Titles */
 .title-class {
-    color: #1A2A3D; /* Main title color */
-    text-align: center;
+    color: #FFD700;
 }
 
 .section-title-class {
-    color: #1A2A3D; /* Section title color */
+    color: #008080;
 }
 
-/* Paragraphs */
+/* Text */
 .text-class {
-    color: #333333; /* Ensuring readability */
+    color: #333333;
+    font-size: 16px;
 }
 
 /* Images */
 .image-class {
-    border: 3px solid #1A2A3D; /* Complementary border */
+    border: 3px solid #00509E;
     max-width: 100%;
     height: auto;
 }
 
 /* Forms */
 .form-class {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     width: 300px;
     margin: auto;
 }
 
-.form-class label {
-    color: #1A2A3D;
-    font-weight: bold;
-}
-
-.form-class input[type="text"], 
-.form-class input[type="email"], 
-.form-class textarea {
-    background-color: #F0F0F0;
-    border: 1px solid #1A2A3D;
-    color: #333333;
-    padding: 10px;
+.form-class input {
     width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-/* Buttons */
 .button-class {
-    background-color: #1A2A3D;
-    color: #FFFFFF;
+    background-color: #00509E;
+    color: white;
+    padding: 10px 15px;
     border: none;
-    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 .button-class:hover {
-    background-color: #ADD8E6;
+    background-color: #003366;
 }
 
 /* Footer */
 .footer-class {
-    background-color: #1A2A3D;
-    color: #FFFFFF;
+    background-color: #333;
+    color: white;
     text-align: center;
     padding: 15px;
     margin-top: 20px;
 }
 
-/* Accessibility & Responsive Design */
+/* Responsive Design */
 @media (max-width: 768px) {
     .nav-class ul {
         display: flex;
