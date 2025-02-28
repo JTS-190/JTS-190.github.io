@@ -4,18 +4,8 @@
     color: #333333;
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px; /* Adds space around the entire page */
-    text-align: center;
-}
-
-/* Main Content Wrapper */
-.container-class {
-    max-width: 900px; /* Keeps content from stretching too wide */
-    margin: 0 auto; /* Centers content */
-    padding: 20px; /* Adds cushion inside */
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    text-align: center; /* Centers inline elements */
 }
 
 /* Header */
@@ -24,47 +14,35 @@
     color: #FFFFFF;
     text-align: center;
     padding: 20px;
-    border-radius: 10px;
 }
 
 /* Navigation */
 .nav-class {
     background-color: #1A2A3D;
     text-align: center;
-    padding: 15px;
-    border-radius: 10px;
+    padding: 10px;
 }
 
 .nav-link-class {
     color: #FFFFFF;
     text-decoration: none;
     padding: 10px;
-    margin: 0 15px; /* Spreads out nav links */
+    margin: 0 10px;
     display: inline-block;
 }
 
 .nav-link-class:hover {
     background-color: #ADD8E6;
     padding: 10px;
-    border-radius: 5px;
 }
 
-/* Sections */
-.hero-section-class, 
-.origin-section-class, 
-.testimonial-section-class, 
-.faq-section-class, 
-.newsletter-section-class, 
-.contact-section-class {
-    max-width: 800px; /* Limits content width for better readability */
-    margin: 40px auto; /* Adds spacing between sections */
+/* Hero Section */
+.hero-section-class {
+    text-align: center;
     padding: 20px;
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Text Styling */
+/* Titles */
 .title-class, 
 .section-title-class, 
 .faq-question-class {
@@ -72,10 +50,10 @@
     text-align: center;
 }
 
+/* Paragraphs */
 .text-class {
     color: #333333;
     text-align: center;
-    padding: 10px;
 }
 
 /* Images */
@@ -85,7 +63,7 @@
     height: auto;
     border-radius: 8px;
     display: block;
-    margin: 20px auto; /* Centers and adds space */
+    margin: 0 auto; /* Centers block elements */
 }
 
 /* Testimonials */
@@ -105,14 +83,21 @@
     color: #1A2A3D;
 }
 
+/* FAQ */
+.faq-section-class {
+    background-color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+}
+
 /* Forms */
 .form-class {
     background-color: #FFFFFF;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 350px;
-    margin: 30px auto; /* Centers form and adds space */
+    width: 300px;
+    margin: auto;
     text-align: center;
 }
 
@@ -120,7 +105,6 @@
     color: #1A2A3D;
     font-weight: bold;
     display: block;
-    margin-bottom: 5px;
 }
 
 .input-class {
@@ -129,7 +113,7 @@
     color: #333333;
     padding: 10px;
     width: 90%;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -140,11 +124,10 @@
     background-color: #1A2A3D;
     color: #FFFFFF;
     border: none;
-    padding: 12px 24px;
+    padding: 10px 20px;
     cursor: pointer;
     display: block;
-    margin: 15px auto;
-    border-radius: 5px;
+    margin: 10px auto;
 }
 
 .button-class:hover {
@@ -153,30 +136,19 @@
 
 /* Footer */
 .footer-class {
-    background-color: #FFFFFF;
-    color: #1A2A3D;
+    background-color: #1A2A3D;
+    color: #FFFFFF;
     text-align: center;
     padding: 15px;
     margin-top: 20px;
-    border-radius: 10px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .container-class, 
-    .hero-section-class, 
-    .origin-section-class, 
-    .testimonial-section-class, 
-    .faq-section-class, 
-    .newsletter-section-class, 
-    .contact-section-class {
-        width: 90%;
-        padding: 15px;
-    }
-
     .nav-class {
         display: flex;
         flex-direction: column;
+        text-align: center;
     }
 
     .form-class {
