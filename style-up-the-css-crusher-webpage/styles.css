@@ -1,15 +1,16 @@
-/* Body */
+/* General Styles */
 .body-class {
-    background-color: #D3D3D3; /* Subtle background color */
+    background-color: #D3D3D3;
     color: #333333;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    text-align: center; /* Centers inline elements */
 }
 
 /* Header */
 .header-class {
-    background-color: #1A2A3D; /* Contrasting background */
+    background-color: #1A2A3D;
     color: #FFFFFF;
     text-align: center;
     padding: 20px;
@@ -27,15 +28,12 @@
     text-decoration: none;
     padding: 10px;
     margin: 0 10px;
+    display: inline-block;
 }
 
 .nav-link-class:hover {
     background-color: #ADD8E6;
     padding: 10px;
-}
-
-.nav-class .active {
-    font-weight: bold; /* Make active page link bold */
 }
 
 /* Hero Section */
@@ -45,26 +43,27 @@
 }
 
 /* Titles */
-.title-class {
-    color: #1A2A3D; /* Main title color */
+.title-class, 
+.section-title-class, 
+.faq-question-class {
+    color: #1A2A3D;
     text-align: center;
-}
-
-.section-title-class {
-    color: #1A2A3D; /* Section title color */
 }
 
 /* Paragraphs */
 .text-class {
-    color: #333333; /* Ensuring readability */
+    color: #333333;
+    text-align: center;
 }
 
 /* Images */
 .image-class {
-    border: 3px solid #1A2A3D; /* Complementary border */
+    border: 3px solid #1A2A3D;
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+    display: block;
+    margin: 0 auto; /* Centers block elements */
 }
 
 /* Testimonials */
@@ -72,13 +71,15 @@
     font-style: italic;
     border-left: 4px solid #1A2A3D;
     padding-left: 10px;
-    margin: 20px 0;
+    margin: 20px auto;
+    text-align: center;
+    display: inline-block;
 }
 
 .cite-class {
     font-weight: bold;
     display: block;
-    text-align: right;
+    text-align: center;
     color: #1A2A3D;
 }
 
@@ -86,15 +87,7 @@
 .faq-section-class {
     background-color: #FFFFFF;
     padding: 20px;
-}
-
-.faq-class {
-    margin-bottom: 15px;
-}
-
-.faq-question-class {
-    color: #1A2A3D;
-    font-weight: bold;
+    text-align: center;
 }
 
 /* Forms */
@@ -105,11 +98,13 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     width: 300px;
     margin: auto;
+    text-align: center;
 }
 
 .label-class {
     color: #1A2A3D;
     font-weight: bold;
+    display: block;
 }
 
 .input-class {
@@ -117,8 +112,11 @@
     border: 1px solid #1A2A3D;
     color: #333333;
     padding: 10px;
-    width: 100%;
+    width: 90%;
     margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Buttons */
@@ -128,6 +126,8 @@
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    display: block;
+    margin: 10px auto;
 }
 
 .button-class:hover {
@@ -143,7 +143,7 @@
     margin-top: 20px;
 }
 
-/* Accessibility & Responsive Design */
+/* Responsive Design */
 @media (max-width: 768px) {
     .nav-class {
         display: flex;
