@@ -1,14 +1,12 @@
-/* General Styles */
 .body-class {
     background-color: #D3D3D3;
     color: #333333;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center; /* Centers inline elements */
+    text-align: center; 
 }
 
-/* Header */
 .header-class {
     background-color: #1A2A3D;
     color: #FFFFFF;
@@ -16,7 +14,6 @@
     padding: 20px;
 }
 
-/* Navigation */
 .nav-class {
     background-color: #1A2A3D;
     text-align: center;
@@ -36,13 +33,11 @@
     padding: 10px;
 }
 
-/* Hero Section */
 .hero-section-class {
     text-align: center;
     padding: 20px;
 }
 
-/* Titles */
 .title-class, 
 .section-title-class, 
 .faq-question-class {
@@ -50,23 +45,20 @@
     text-align: center;
 }
 
-/* Paragraphs */
 .text-class {
     color: #333333;
     text-align: center;
 }
 
-/* Images */
 .image-class {
     border: 3px solid #1A2A3D;
     max-width: 100%;
     height: auto;
     border-radius: 8px;
     display: block;
-    margin: 0 auto; /* Centers block elements */
+    margin: 0 auto; 
 }
 
-/* Testimonials */
 .blockquote-class {
     font-style: italic;
     border-left: 4px solid #1A2A3D;
@@ -83,14 +75,12 @@
     color: #1A2A3D;
 }
 
-/* FAQ */
 .faq-section-class {
     background-color: #FFFFFF;
     padding: 20px;
     text-align: center;
 }
 
-/* Forms */
 .form-class {
     background-color: #FFFFFF;
     padding: 20px;
@@ -119,7 +109,6 @@
     margin-right: auto;
 }
 
-/* Buttons */
 .button-class {
     background-color: #1A2A3D;
     color: #FFFFFF;
@@ -134,7 +123,6 @@
     background-color: #ADD8E6;
 }
 
-/* Footer */
 .footer-class {
     background-color: #1A2A3D;
     color: #FFFFFF;
@@ -143,7 +131,6 @@
     margin-top: 20px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .nav-class {
         display: flex;
