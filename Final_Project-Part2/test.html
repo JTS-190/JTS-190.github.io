@@ -3,6 +3,73 @@
   <head>
     <title>My Website</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .top-bar {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #f0f0f0;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .logo {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: #1A2A3D;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFFFFF;
+        font-weight: bold;
+        margin-right: 20px;
+      }
+
+      .search-bar {
+        flex: 1;
+      }
+
+      .search-bar input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #1A2A3D;
+        border-radius: 4px;
+        background-color: #F0F0F0;
+        color: #333333;
+      }
+
+      nav {
+        background-color: #1A2A3D;
+        text-align: center;
+        padding: 10px;
+      }
+
+      nav a {
+        color: #FFFFFF;
+        text-decoration: none;
+        padding: 10px;
+      }
+
+      nav a:hover {
+        background-color: #ADD8E6;
+      }
+
+      h1 {
+        color: #1A2A3D;
+        text-align: center;
+      }
+
+      p {
+        color: #333333;
+      }
+    </style>
   </head>
   <body>
 
@@ -10,7 +77,7 @@
     <div class="top-bar">
       <div class="logo">LOGO</div>
       <div class="search-bar">
-        <input type="text" placeholder="Search...">
+        <input type="text" id="filterInput" placeholder="Filter content...">
       </div>
     </div>
 
@@ -23,7 +90,26 @@
 
     <!-- Main Content -->
     <h1>Welcome to My Website!</h1>
-    <p>This website contains information about me, my resume, and how to contact me.</p>
+
+    <p class="content">This is a paragraph that you can filter for keywords like "website" or "contact".</p>
+    <p class="content">Here's another paragraph with information about me.</p>
+    <p class="content">This one contains more details about the services I offer.</p>
+
+    <script>
+      document.getElementById('filterInput').addEventListener('input', function() {
+        const query = this.value.toLowerCase();  // Get the search query (case insensitive)
+        const contentElements = document.querySelectorAll('.content'); // Select all paragraphs with the class 'content'
+
+        contentElements.forEach(function(element) {
+          const text = element.textContent.toLowerCase();  // Get the text content of the element (case insensitive)
+          if (text.includes(query)) {
+            element.style.display = '';  // Show the element if it matches the query
+          } else {
+            element.style.display = 'none';  // Hide the element if it does not match
+          }
+        });
+      });
+    </script>
 
   </body>
 </html>
