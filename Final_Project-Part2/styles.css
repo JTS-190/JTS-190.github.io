@@ -53,7 +53,6 @@ h1 {
     box-sizing: border-box;
 }
 
-/* Navigation Bar */
 nav {
     background-color: #1A2A3D;
     text-align: center;
@@ -112,7 +111,7 @@ input[type="submit"]:hover {
 }
 
 
-/* Table Styles */
+/* table */
 table {
     width: 100%;
     border-collapse: collapse;
