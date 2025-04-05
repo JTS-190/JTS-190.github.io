@@ -1,105 +1,110 @@
-/* Global Styles */
+/* General Styles */
 body {
-  background-color: #D3D3D3;
-  color: #333333;
-  font-family: Arial, sans-serif;
+    background-color: #D3D3D3;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
-  color: #1A2A3D;
-  text-align: center;
+    color: #1A2A3D;
+    text-align: center;
 }
 
-h2 {
-  color: #1A2A3D;
+/* Top Bar (for logo and search bar) */
+.top-bar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
 }
 
-p {
-  color: #333333;
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #1A2A3D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.search-bar {
+    flex: 1;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #1A2A3D;
+    border-radius: 4px;
+    background-color: #F0F0F0;
+    color: #333333;
 }
 
 /* Navigation Bar */
 nav {
-  background-color: #1A2A3D;
-  text-align: center;
-  padding: 10px;
+    background-color: #1A2A3D;
+    text-align: center;
+    padding: 10px;
 }
 
 nav a {
-  color: #FFFFFF;
-  text-decoration: none;
-  padding: 10px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px;
 }
 
 nav a:hover {
-  background-color: #ADD8E6;
+    background-color: #ADD8E6;
 }
 
-/* Top Bar */
-.top-bar {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #f0f0f0;
-  border-bottom: 1px solid #ccc;
+/* Highlighting Search Results */
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
 }
 
-.logo {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: #1A2A3D; /* Keeping the color from the old style */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #FFFFFF; /* Text color for logo */
-  font-weight: bold;
-  margin-right: 20px;
+/* Paragraphs */
+p {
+    color: #333333;
 }
 
-.search-bar {
-  flex: 1;
-}
-
-.search-bar input {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #1A2A3D; /* Match the color palette */
-  border-radius: 4px;
-  background-color: #F0F0F0; /* Lighter background for search input */
-  color: #333333;
-}
-
-/* Form Styling */
+/* Form Styles */
 form {
-  background-color: #FFFFFF;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 label {
-  color: #1A2A3D;
-  font-weight: bold;
+    color: #1A2A3D;
+    font-weight: bold;
 }
 
 input[type="text"], input[type="email"], textarea {
-  background-color: #F0F0F0;
-  border: 1px solid #1A2A3D;
-  color: #333333;
-  padding: 10px;
-  width: 100%;
+    background-color: #F0F0F0;
+    border: 1px solid #1A2A3D;
+    color: #333333;
+    padding: 10px;
+    width: 100%;
 }
 
 input[type="submit"] {
-  background-color: #1A2A3D;
-  color: #FFFFFF;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
+    background-color: #1A2A3D;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
 input[type="submit"]:hover {
-  background-color: #ADD8E6;
+    background-color: #ADD8E6;
 }
