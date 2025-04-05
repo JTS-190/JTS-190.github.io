@@ -1,108 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>My Website</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+<html>
+  <head>
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      /* You can move this to styles.css if you want */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
 
-    /* Top area with logo and search */
-    .top-bar {
-      display: flex;
-      align-items: center;
-      padding: 10px 20px;
-      background-color: #f0f0f0;
-      border-bottom: 1px solid #ccc;
-    }
+      .top-bar {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #f0f0f0;
+        border-bottom: 1px solid #ccc;
+      }
 
-    .logo {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background-color: #ccc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      margin-right: 20px;
-    }
+      .logo {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-right: 20px;
+      }
 
-    .search-bar {
-      flex: 1;
-    }
+      .search-bar {
+        flex: 1;
+      }
 
-    .search-bar input {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      border: 1px solid #aaa;
-      border-radius: 4px;
-    }
+      .search-bar input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #aaa;
+        border-radius: 4px;
+      }
 
-    /* Navigation bar */
-    nav {
-      background-color: #ddd;
-      padding: 10px;
-      text-align: center;
-    }
+      nav {
+        background-color: #ddd;
+        padding: 10px;
+        text-align: center;
+        border-top: 1px solid #ccc;
+      }
 
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: black;
-      padding: 6px 12px;
-      border-radius: 4px;
-    }
+      nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+      }
 
-    nav a.active {
-      background-color: #a3c2e0;
-    }
+      nav a:hover {
+        color: darkblue;
+      }
+    </style>
+  </head>
+  <body>
 
-    /* Header */
-    .header {
-      background-color: #ccc;
-      text-align: center;
-      padding: 20px;
-      font-size: 24px;
-      margin-top: 10px;
-    }
-
-    /* Main content */
-    .main-content {
-      background-color: #e0e0e0;
-      padding: 40px;
-      margin: 20px;
-      text-align: center;
-      font-size: 18px;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="top-bar">
-    <div class="logo">LOGO</div>
-    <div class="search-bar">
-      <input type="text" placeholder="Search...">
+    <!-- Top bar with logo and search -->
+    <div class="top-bar">
+      <div class="logo">LOGO</div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search...">
+      </div>
     </div>
-  </div>
 
-  <nav>
-    <a href="index.html" class="active">Homepage</a>
-    <a href="CharityList.html">Charities List Page</a>
-    <a href="charityProfile.html">Charity Profile Page</a>
-  </nav>
+    <!-- Navigation -->
+    <nav>
+      | <a href="index.html">Home</a> |
+      <a href="CharityList.html">About</a> |
+      <a href="contact.html">Contact Me</a> |
+    </nav>
 
-  <div class="header">
-    Header
-  </div>
+    <!-- Main Content -->
+    <h1>Welcome to My Website!</h1>
+    <p>This website contains information about me, my resume, and how to contact me.</p>
 
-  <div class="main-content">
-    General information
-  </div>
-
-</body>
+  </body>
 </html>
