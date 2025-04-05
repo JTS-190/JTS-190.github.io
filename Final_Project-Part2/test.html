@@ -28,14 +28,23 @@
 
     <p class="content">This is a paragraph that you can filter for keywords like "website" or "contact".</p>
     <p class="content">Here's another paragraph with information about me.</p>
-    <p class="content">This one contains more details about the services I offer.</p>
+    <p class="content">This one contains more details about the services I offer.NEW</p>
 
     <script>
       document.getElementById('filterInput').addEventListener('input', function() {
   const query = this.value.trim().toLowerCase();
+  const regex = new RegExp(query, 'gi');
+  
   document.querySelectorAll('.content').forEach(element => {
-    const regex = new RegExp(query, 'gi');
-    element.innerHTML = query ? element.textContent.replace(regex, `<span class="highlight">$&</span>`) : element.textContent;
+    const originalText = element.textContent;
+    
+    if (query) {
+      element.innerHTML = originalText.replace(regex, match => {
+        return `<span class="highlight">${match}</span>`;
+      });
+    } else {
+      element.textContent = originalText;
+    }
   });
 });
     </script>
