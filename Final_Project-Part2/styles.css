@@ -114,15 +114,17 @@ input[type="submit"]:hover {
 
 /* table */
 table {
-    width: 60%;
-    margin: 20px auto;
-    border-collapse: collapse;
+    width: 90%; 
+    margin: 20px auto; 
+    border-collapse: collapse; 
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* maybe */
 }
 
 th, td {
-    padding: 12px;
+    padding: 15px;
     text-align: left;
-    border: 1px solid #ddd;
+    border: 1px solid #1A2A3D;
 }
 
 th {
@@ -130,15 +132,11 @@ th {
     color: white;
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+td {
+    background-color: #F0F0F0;
 }
 
-a {
-    text-decoration: none;
-    color: #1A2A3D;
-}
-
-a:hover {
-    color: #ADD8E6;
+.charity-logo {
+    width: 100px; 
+    height: auto;
 }
