@@ -114,7 +114,7 @@ input[type="submit"]:hover {
 
 /* table */
 table {
-    width: 100%;
+    width: 60%;
     border-collapse: collapse;
     margin: 20px 0;
 }
