@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      /* Inline CSS for quick testing */
+      body {
+        font-family: sans-serif;
+        background-color: #1e2a38;
+        color: #ccc;
+        padding: 20px;
+      }
+
+      nav a {
+        color: #ccc;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+
+      .filter-section {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .filter-section img {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+      }
+
+      #searchInput {
+        padding: 8px;
+        border-radius: 5px;
+        border: none;
+        width: 200px;
+      }
+
+      ul {
+        margin-top: 20px;
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        background-color: #2e3b4f;
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      | <a href="index.html">Home</a> |
+      <a href="CharityList.html">About</a> |
+      <a href="contact.html">Contact Me</a> |
+    </nav>
+
+    <h1>Welcome to My Website!</h1>
+    <p>This website contains information about me, my resume, and how to contact me.</p>
+
+    <!-- 🌟 Filter Bar with Image -->
+    <div class="filter-section">
+      <img src="https://via.placeholder.com/50" alt="Icon">
+      <input type="text" id="searchInput" placeholder="Filter items...">
+    </div>
+
+    <!-- 📋 List of Things to Filter -->
+    <ul id="itemList">
+      <li>Resume</li>
+      <li>Cybersecurity Projects</li>
+      <li>Charity Work</li>
+      <li>Contact Info</li>
+      <li>JavaScript Games</li>
+    </ul>
+
+    <script>
+      const searchBox = document.getElementById('searchInput');
+      const itemList = document.getElementById('itemList');
+      const items = itemList.getElementsByTagName('li');
+
+      searchBox.addEventListener('keyup', function () {
+        const searchTerm = searchBox.value.toLowerCase();
+        for (let i = 0; i < items.length; i++) {
+          const itemText = items[i].textContent.toLowerCase();
+          items[i].style.display = itemText.includes(searchTerm) ? '' : 'none';
+        }
+      });
+    </script>
+  </body>
+</html>
