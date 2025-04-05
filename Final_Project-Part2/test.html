@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Filter with Highlight</title>
+    <title>My Website</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -25,12 +23,10 @@
 
     <!-- Main Content -->
     <h1>Welcome to My Website!</h1>
-
-    <p class="content">This is a paragraph that you can filter for keywords like "website" or "contact".</p>
-    <p class="content">Here's another paragraph with information about me.</p>
-    <p class="content">This one contains more details about the services I offer.NEW</p>
-
-    <script>
+    <p>This website contains information about me, my resume, and how to contact me.</p>
+    
+      
+    <script> // logic for filter
       document.getElementById('filterInput').addEventListener('input', function() {
   const query = this.value.trim().toLowerCase();
   const regex = new RegExp(query, 'gi');
@@ -48,6 +44,6 @@
   });
 });
     </script>
-
+    
   </body>
 </html>
