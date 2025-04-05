@@ -36,7 +36,7 @@ h1 {
 
 /* Logo Image Styles */
 .logo img {
-    width: 100%;  
+    width: 75%; /*100*/  
     height: auto; 
 }
 
