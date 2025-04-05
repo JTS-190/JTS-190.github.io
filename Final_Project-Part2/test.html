@@ -23,26 +23,27 @@
 
     <!-- Main Content -->
     <h1>Welcome to My Website!</h1>
-    <p>This website contains information about me, my resume, and how to contact me.</p>
+    <p>This website contains information about me, my resume, and how to contact me. NEW</p>
     
       
-    <script> // logic for filter
+     <script> 
+      // Logic for filter
       document.getElementById('filterInput').addEventListener('input', function() {
-  const query = this.value.trim().toLowerCase();
-  const regex = new RegExp(query, 'gi');
-  
-  document.querySelectorAll('.content').forEach(element => {
-    const originalText = element.textContent;
-    
-    if (query) {
-      element.innerHTML = originalText.replace(regex, match => {
-        return `<span class="highlight">${match}</span>`;
+        const query = this.value.trim().toLowerCase();
+        const regex = new RegExp(query, 'gi');
+        
+        document.querySelectorAll('.content').forEach(element => {
+          const originalText = element.textContent; /
+          
+          if (query) {
+            element.innerHTML = originalText.replace(regex, match => {
+              return `<span class="highlight">${match}</span>`;
+            });
+          } else {
+            element.innerHTML = originalText;
+          }
+        });
       });
-    } else {
-      element.textContent = originalText;
-    }
-  });
-});
     </script>
     
   </body>
