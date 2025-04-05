@@ -21,7 +21,7 @@ h1 {
     border-bottom: 1px solid #ccc;
 }
 
-.logo {
+/*.logo {
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -32,7 +32,7 @@ h1 {
     color: #FFFFFF;
     font-weight: bold;
     margin-right: 20px;
-}
+}*/
 
 /* Logo Image Styles */
 .logo img {
