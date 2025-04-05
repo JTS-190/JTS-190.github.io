@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>My Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Filter with Highlight</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -61,9 +62,9 @@
         background-color: #ADD8E6;
       }
 
-      h1 {
-        color: #1A2A3D;
-        text-align: center;
+      .highlight {
+        background-color: yellow; /* Highlight color */
+        font-weight: bold;
       }
 
       p {
@@ -97,15 +98,18 @@
 
     <script>
       document.getElementById('filterInput').addEventListener('input', function() {
-        const query = this.value.toLowerCase();  // Get the search query (case insensitive)
+        const query = this.value.trim().toLowerCase();  // Get the search query (case insensitive)
         const contentElements = document.querySelectorAll('.content'); // Select all paragraphs with the class 'content'
 
         contentElements.forEach(function(element) {
-          const text = element.textContent.toLowerCase();  // Get the text content of the element (case insensitive)
-          if (text.includes(query)) {
-            element.style.display = '';  // Show the element if it matches the query
-          } else {
-            element.style.display = 'none';  // Hide the element if it does not match
+          // Remove previous highlights
+          element.innerHTML = element.innerHTML.replace(/<span class="highlight">|<\/span>/g, '');
+
+          if (query) {
+            const regex = new RegExp(`(${query})`, 'gi');  // Regular expression for case-insensitive match
+
+            // Highlight matching text
+            element.innerHTML = element.textContent.replace(regex, `<span class="highlight">$1</span>`);
           }
         });
       });
