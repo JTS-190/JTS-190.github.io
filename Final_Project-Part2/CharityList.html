@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About me</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+    <body>
+
+    <!-- Top bar with logo and search -->
+    <div class="top-bar">
+      <div class="logo">LOGO</div>
+      <div class="search-bar">
+        <input type="text" id="filterInput" placeholder="Filter content...">
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+      | <a href="index.html">Home</a> |
+      <a href="CharityList.html">About</a> |
+      <a href="contact.html">Contact Me</a> |
+    </nav>
+
+      <h1>About me</h1>
+      <h2>John Tyler Scott</h2>
+      <img src="https://wallpapers.com/images/high/steve-and-animals-moving-minecraft-lzijf8tyvyhvl56s.webp" alt="Minecraft Cover Art" width="200">
+      <p>Hello! I'm John Tyler Scott, a student majoring in cybersecurity. I love playing video games, coding, and spending time with my dog. My interest in tech began with the game Minecraft, and now I'm pursuing it professionally!</p>
+      <p>My favorite hobby is playing video games. I enjoy the creativity, strategy, and fun they bring into my life.</p> 
+
+
+
+      
+      <script> // logic for filter
+      document.getElementById('filterInput').addEventListener('input', function() {
+  const query = this.value.trim().toLowerCase();
+  const regex = new RegExp(query, 'gi');
+  
+  document.querySelectorAll('.content').forEach(element => {
+    const originalText = element.textContent;
+    
+    if (query) {
+      element.innerHTML = originalText.replace(regex, match => {
+        return `<span class="highlight">${match}</span>`;
+      });
+    } else {
+      element.textContent = originalText;
+    }
+  });
+});
+    </script>
+    </body>
+</html>
