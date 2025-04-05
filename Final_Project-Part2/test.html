@@ -32,21 +32,12 @@
 
     <script>
       document.getElementById('filterInput').addEventListener('input', function() {
-        const query = this.value.trim().toLowerCase();  // Get the search query (case insensitive)
-        const contentElements = document.querySelectorAll('.content'); // Select all paragraphs with the class 'content'
-
-        contentElements.forEach(function(element) {
-          // Remove previous highlights
-          element.innerHTML = element.innerHTML.replace(/<span class="highlight">|<\/span>/g, '');
-
-          if (query) {
-            const regex = new RegExp(`(${query})`, 'gi');  // Regular expression for case-insensitive match
-
-            // Highlight matching text
-            element.innerHTML = element.textContent.replace(regex, `<span class="highlight">$1</span>`);
-          }
-        });
-      });
+  const query = this.value.trim().toLowerCase();
+  document.querySelectorAll('.content').forEach(element => {
+    const regex = new RegExp(query, 'gi');
+    element.innerHTML = query ? element.textContent.replace(regex, `<span class="highlight">$&</span>`) : element.textContent;
+  });
+});
     </script>
 
   </body>
