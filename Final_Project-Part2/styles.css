@@ -114,11 +114,11 @@ input[type="submit"]:hover {
 
 /* table */
 table {
-    width: 90%; 
-    margin: 20px auto; 
-    border-collapse: collapse; 
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
     background-color: #FFFFFF;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* maybe */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 th, td {
@@ -136,7 +136,18 @@ td {
     background-color: #F0F0F0;
 }
 
+.charity-info {
+    display: flex;
+    align-items: center;
+}
+
 .charity-logo {
-    width: 100px; 
+    width: 50px;
     height: auto;
+    margin-right: 10px;
+}
+
+.charity-name {
+    font-size: 16px;
+    font-weight: bold;
 }
