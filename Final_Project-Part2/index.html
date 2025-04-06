@@ -1,46 +1,54 @@
-<body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
     <!-- Top bar with logo and search -->
     <div class="top-bar">
-        <div class="logo">
-            <img src="https://imgs.search.brave.com/iccmCPYs3Jbh3PqgW9KG5PB8_lAMMaf3MZIGRhsViuM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9oZWxw/aHViLnBvdmVydHls/YXcub3JnL2ltYWdl/cy9sb2dvLnBuZw" alt="Logo">
-        </div>
-        <div class="search-bar">
-            <input type="text" id="filterInput" placeholder="Filter content...">
-        </div>
+      <div class="logo">
+        <img src="https://imgs.search.brave.com/iccmCPYs3Jbh3PqgW9KG5PB8_lAMMaf3MZIGRhsViuM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9oZWxw/aHViLnBvdmVydHls/YXcub3JnL2ltYWdl/cy9sb2dvLnBuZw" alt="Logo">
+      </div>
+      <div class="search-bar">
+        <input type="text" id="filterInput" placeholder="Filter content...">
+      </div>
     </div>
 
     <!-- Navigation -->
     <nav>
-        | <a href="index.html">Home</a> |
-        <a href="CharityList.html">Charity List</a> |
-        <a href="contact.html">Contact Me</a> |
+      | <a href="index.html">Home</a> |
+      <a href="CharityList.html">Charity List</a> |
+      <a href="contact.html">Contact Me</a> |
     </nav>
 
     <!-- Main Content -->
-    <div class="container">
-        <h1>Welcome to My Website!</h1>
-        <p class="content">
-            This website contains information about me, my resume, and how to contact me. NEW 3
-        </p>
-    </div>
-
-    <script>
-        // Logic for filter
-        document.getElementById('filterInput').addEventListener('input', function() {
-            const query = this.value.trim().toLowerCase();
-            const regex = new RegExp(query, 'gi');
-
-            document.querySelectorAll('.content').forEach(element => {
-                const originalText = element.textContent; 
-
-                if (query) {
-                    element.innerHTML = originalText.replace(regex, match => {
-                        return `<span class="highlight">${match}</span>`;
-                    });
-                } else {
-                    element.innerHTML = originalText;
-                }
+    <h1>Welcome to My Website!</h1>
+    <p class="content">
+      This website contains information about me, my resume, and how to contact me. NEW
+    </p>
+    
+      
+     <script> 
+      // Logic for filter
+      document.getElementById('filterInput').addEventListener('input', function() {
+        const query = this.value.trim().toLowerCase();
+        const regex = new RegExp(query, 'gi');
+        
+        document.querySelectorAll('.content').forEach(element => {
+          const originalText = element.textContent; 
+          
+          if (query) {
+            element.innerHTML = originalText.replace(regex, match => {
+              return <span class="highlight">${match}</span>;
             });
+          } else {
+            element.innerHTML = originalText;
+          }
         });
+      });
     </script>
-</body>
+    
+  </body>
+</html>
