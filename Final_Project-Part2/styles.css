@@ -235,20 +235,35 @@ td {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     margin: 10px;
 }
+
+.explore-box {
+    background-color: #f4f4f4; /* Light background for the box */
+    padding: 20px; /* Added some extra space inside the box */
+    border: 1px solid #ccc; /* Border around the box */
+    margin-top: 20px; /* Adds spacing above the box */
+    border-radius: 5px; /* Rounded corners for the box */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional, to match other sections */
+}
+
+.explore-text {
+    font-weight: bold; /* Make the "Explore the following sections..." text bold */
+    margin-bottom: 10px; /* Space below the header text */
+}
+
 .index-list {
-  list-style-type: none; /* Removes default bullet points */
-  padding: 0;
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0;
 }
 
 .index-list li {
-  margin: 10px 0; /* Adds spacing between items */
+    margin: 10px 0; /* Adds spacing between items */
 }
 
 .index-list a {
-  color: #3498db; /* Link color */
-  text-decoration: none; /* Removes underline from links */
+    color: #3498db; /* Link color */
+    text-decoration: none; /* Removes underline from links */
 }
 
 .index-list a:hover {
-  text-decoration: underline; /* Adds underline on hover */
+    text-decoration: underline; /* Adds underline on hover */
 }
