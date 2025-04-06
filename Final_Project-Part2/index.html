@@ -24,10 +24,16 @@
     </nav>
 
     <!-- Main Content -->
-    <h1>Welcome to My Website!</h1>
-    <p class="content">
-      This website contains information about me, my resume, and how to contact me. NEW
-    </p>
+    <h1>Title</h1>
+
+<div class="charity-info">
+    <div class="charity-description">
+        <p class="content">
+            The Red Cross is a humanitarian organization that provides emergency assistance, disaster relief, and health education. It plays a major role in disaster response, offering shelter, food, and emotional support during emergencies. 
+            The Red Cross also runs nationwide blood donation drives, teaches CPR and first aid, and supports military families. Globally, it's part of the International Red Cross and Red Crescent Movement, active in over 190 countries.
+        </p>
+    </div>
+</div>
     
       
      <script> 
@@ -41,7 +47,7 @@
           
           if (query) {
             element.innerHTML = originalText.replace(regex, match => {
-              return <span class="highlight">${match}</span>;
+              return `<span class="highlight">${match}</span>`;
             });
           } else {
             element.innerHTML = originalText;
