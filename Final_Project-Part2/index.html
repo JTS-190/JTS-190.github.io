@@ -1,99 +1,48 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>My Website</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
+<body>
 
-    <!-- Top bar with logo and search -->
-    <div class="top-bar">
-      <div class="logo">
-        <img src="https://imgs.search.brave.com/iccmCPYs3Jbh3PqgW9KG5PB8_lAMMaf3MZIGRhsViuM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9oZWxw/aHViLnBvdmVydHls/YXcub3JnL2ltYWdl/cy9sb2dvLnBuZw" alt="Logo">
-      </div>
-      <div class="search-bar">
-        <input type="text" id="filterInput" placeholder="Filter content...">
-      </div>
+  <!-- Top bar with logo and search -->
+  <div class="top-bar">
+    <div class="logo">
+      <img src="https://imgs.search.brave.com/iccmCPYs3Jbh3PqgW9KG5PB8_lAMMaf3MZIGRhsViuM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9oZWxw/aHViLnBvdmVydHls/YXcub3JnL2ltYWdl/cy9sb2dvLnBuZw" alt="Logo">
     </div>
+    <div class="search-bar">
+      <input type="text" id="filterInput" placeholder="Filter content...">
+    </div>
+  </div>
 
-    <!-- Navigation -->
-    <nav>
-      | <a href="index.html">Home</a> |
-      <a href="CharityList.html">Charity List</a> |
-      <a href="contact.html">Contact Me</a> |
-    </nav>
+  <!-- Navigation -->
+  <nav>
+    | <a href="index.html">Home</a> |
+    <a href="CharityList.html">Charity List</a> |
+    <a href="contact.html">Contact Me</a> |
+  </nav>
 
-    <!-- Main Content -->
+  <!-- Main Content -->
+  <div class="container">
     <h1>Welcome to My Website!</h1>
     <p class="content">
       This website contains information about me, my resume, and how to contact me. NEW
     </p>
-    
-    <!-- About Me Section -->
-    <section id="intro">
-      <h2>About Me</h2>
-      <p>Hello! I'm [Your Name], and this is my personal website. Here you'll find information about my skills, my experiences, and how to get in touch with me. Feel free to explore!</p>
-    </section>
+  </div>
 
-    <!-- Services Section -->
-    <section id="services">
-      <h3>What I Do</h3>
-      <p>I specialize in web development, coding, and designing beautiful websites. Below are some of my skills:</p>
-      <ul>
-        <li>Web Development</li>
-        <li>Front-end and Back-end Development</li>
-        <li>UI/UX Design</li>
-      </ul>
-    </section>
-
-    <!-- Latest Updates Section -->
-    <section id="updates">
-      <h3>Latest Updates</h3>
-      <p>Check out my latest blog post or project updates!</p>
-      <a href="blog.html">Visit my blog</a>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section id="cta">
-      <h3>Get in Touch</h3>
-      <p>Have any questions or want to collaborate? Feel free to <a href="contact.html">contact me</a>!</p>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials">
-      <h3>What People Say</h3>
-      <blockquote>"Working with [Your Name] was a great experience. They are a talented web developer!" - Client Name</blockquote>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2025 [Your Name]. All rights reserved.</p>
-      <ul>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">LinkedIn</a></li>
-      </ul>
-    </footer>
-
-    <script> 
-      // Logic for filter
-      document.getElementById('filterInput').addEventListener('input', function() {
-        const query = this.value.trim().toLowerCase();
-        const regex = new RegExp(query, 'gi');
+  <script> 
+    // Logic for filter
+    document.getElementById('filterInput').addEventListener('input', function() {
+      const query = this.value.trim().toLowerCase();
+      const regex = new RegExp(query, 'gi');
+      
+      document.querySelectorAll('.content').forEach(element => {
+        const originalText = element.textContent; 
         
-        document.querySelectorAll('.content').forEach(element => {
-          const originalText = element.textContent; 
-          
-          if (query) {
-            element.innerHTML = originalText.replace(regex, match => {
-              return `<span class="highlight">${match}</span>`;
-            });
-          } else {
-            element.innerHTML = originalText;
-          }
-        });
+        if (query) {
+          element.innerHTML = originalText.replace(regex, match => {
+            return `<span class="highlight">${match}</span>`;
+          });
+        } else {
+          element.innerHTML = originalText;
+        }
       });
-    </script>
-    
-  </body>
-</html>
+    });
+  </script>
+
+</body>
