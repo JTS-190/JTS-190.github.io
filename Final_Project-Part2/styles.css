@@ -1,4 +1,4 @@
-body {
+/* body {
     background-color: #D3D3D3;
     color: #333333;
     font-family: Arial, sans-serif;
@@ -212,7 +212,7 @@ td {
     color: #000;
 }
 
-/* Index page specific styles */
+/* Index page specific styles 
 .index-content {
     background-color: #F0F0F0;
     padding: 20px;
@@ -267,3 +267,4 @@ td {
 .index-list a:hover {
     text-decoration: underline;
 }
+*/
