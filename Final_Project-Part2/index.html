@@ -35,7 +35,7 @@
         const regex = new RegExp(query, 'gi');
         
         document.querySelectorAll('.content').forEach(element => {
-          const originalText = element.textContent; /
+          const originalText = element.textContent; 
           
           if (query) {
             element.innerHTML = originalText.replace(regex, match => {
