@@ -70,17 +70,14 @@
     </table>
 
     <script>
-      // Filter logic for the table
       document.getElementById('filterInput').addEventListener('input', function() {
         const query = this.value.trim().toLowerCase();
         const regex = new RegExp(query, 'gi');
         
         document.querySelectorAll('.content').forEach(element => {
           element.querySelectorAll('td').forEach(cell => {
-            // Preserve images and links, but highlight text content
             const originalText = cell.textContent || cell.innerText;
             if (cell.querySelector('img') || cell.querySelector('a')) {
-              // If there's an image or link, don't modify that content
               return;
             }
             cell.innerHTML = originalText.replace(regex, match => {
