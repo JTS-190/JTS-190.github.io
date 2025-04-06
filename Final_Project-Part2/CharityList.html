@@ -68,22 +68,17 @@
 
       
       <script> // logic for filter
-      document.getElementById('filterInput').addEventListener('input', function() {
-  const query = this.value.trim().toLowerCase();
-  const regex = new RegExp(query, 'gi');
-  
-  document.querySelectorAll('.content').forEach(element => {
-    const originalText = element.textContent;
-    
-    if (query) {
-      element.innerHTML = originalText.replace(regex, match => {
-        return `<span class="highlight">${match}</span>`;
-      });
-    } else {
-      element.textContent = originalText;
-    }
-  });
-});
+          document.getElementById('filterInput').addEventListener('input', function() {
+        const query = this.value.trim().toLowerCase();
+        const regex = new RegExp(query, 'gi');
+        
+        document.querySelectorAll('.content').forEach(element => {
+            const originalText = element.textContent; 
+            element.innerHTML = originalText.replace(regex, match => {
+                return `<span class="highlight">${match}</span>`; 
+            });
+        });
+    });
     </script>
     </body>
 </html>
