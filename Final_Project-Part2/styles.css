@@ -3,7 +3,7 @@ body {
     color: #333333;
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 20px;  /* Added padding for buffer */
 }
 
 h1 {
@@ -33,10 +33,9 @@ h1 {
 }
 
 .logo img {
-    width: 80%; 
-    height: auto; 
+    width: 80%;
+    height: auto;
 }
-
 
 .search-bar {
     flex: 1;
@@ -67,7 +66,7 @@ nav a {
 
 nav a:hover {
     background-color: #ADD8E6;
-    color: black; /**/
+    color: black;
 }
 
 .highlight {
@@ -84,6 +83,8 @@ form {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;  /* Added margin for spacing */
+    max-width: 800px;   /* Set max-width for the form */
 }
 
 label {
@@ -111,14 +112,13 @@ input[type="submit"]:hover {
     background-color: #ADD8E6;
 }
 
-
-/* table */
 table {
     width: 90%;
     margin: 20px auto;
     border-collapse: collapse;
     background-color: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;  /* Added padding around the table */
 }
 
 th, td {
@@ -151,8 +151,6 @@ td {
     font-size: 16px;
     font-weight: bold;
 }
-
-/* --- */
 
 .charity-info {
     max-width: 1500px;
