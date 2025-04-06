@@ -3,7 +3,7 @@ body {
     color: #333333;
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;  /* Added padding for buffer */
+    /*padding: 20px;*/  /* Added padding for buffer */
 }
 
 h1 {
