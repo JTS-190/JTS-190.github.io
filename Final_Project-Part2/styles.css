@@ -3,7 +3,6 @@ body {
     color: #333333;
     font-family: Arial, sans-serif;
     margin: 0;
-    /*padding: 20px;*/  /* Added padding for buffer */
 }
 
 h1 {
@@ -83,8 +82,8 @@ form {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;  /* Added margin for spacing */
-    max-width: 800px;   /* Set max-width for the form */
+    margin: 20px auto;
+    max-width: 800px;
 }
 
 label {
@@ -118,7 +117,7 @@ table {
     border-collapse: collapse;
     background-color: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;  /* Added padding around the table */
+    padding: 20px;
 }
 
 th, td {
