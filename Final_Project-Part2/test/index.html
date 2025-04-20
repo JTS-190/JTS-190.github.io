@@ -28,33 +28,40 @@
         HelpHub is a platform designed to connect individuals with charitable organizations in need of support. We offer information on various charities, volunteer opportunities, and ways you can make a difference in your community. Whether you’re looking to donate, volunteer, or just learn more about charitable work, you’ll find everything you need right here.
       </p>
 
-      <div class="explore-box">
-        <p class="explore-text">Explore the following sections to get started:</p>
-        <ul class="index-list">
-          <li><a href="CharityList.html">Charity List</a> – Discover various organizations in need of donations and volunteers.</li>
-          <li><a href="contact.html">Contact Us</a> – Reach out to us for more information or inquiries.</li>
-        </ul>
-      </div>
-    </div>
+          <div class="explore-box">
+            <p class="explore-text">Explore the following sections to get started:</p>
+            <ul class="index-list">
+              <li><a href="CharityList.html">Charity List</a> – Discover various organizations in need of donations and volunteers.</li>
+              <li><a href="contact.html">Contact Us</a> – Reach out to us for more information or inquiries.</li>
+            </ul>
+          </div>
+        </div>
     
-    <script> 
-      document.getElementById('filterInput').addEventListener('input', function() {
-        const query = this.value.trim().toLowerCase();
-        const regex = new RegExp(query, 'gi');
-        
-        document.querySelectorAll('.content').forEach(element => {
-          const originalText = element.textContent; 
-          
-          if (query) {
-            element.innerHTML = originalText.replace(regex, match => {
-              return `<span class="highlight">${match}</span>`;
-            });
-          } else {
-            element.innerHTML = originalText;
-          }
-        });
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.content').forEach(element => {
+      element.setAttribute('data-original', element.textContent);
+    });
+
+    document.getElementById('filterInput').addEventListener('input', function() {
+      const query = this.value.trim().toLowerCase();
+      const regex = new RegExp(query, 'gi');
+
+      document.querySelectorAll('.content').forEach(element => {
+        const originalText = element.getAttribute('data-original');
+
+        if (query) {
+          element.innerHTML = originalText.replace(regex, match => {
+            return `<span class="highlight">${match}</span>`;
+          });
+        } else {
+          element.textContent = originalText;
+        }
       });
-    </script>
+    });
+  });
+</script>
+
     
   </body>
 </html>
