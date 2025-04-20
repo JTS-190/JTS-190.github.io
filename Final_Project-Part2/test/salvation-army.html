@@ -6,6 +6,7 @@
   </head>
   <body>
 
+    <!-- top bar with logo and search -->
     <div class="top-bar">
       <div class="logo">
         <img src="https://imgs.search.brave.com/iccmCPYs3Jbh3PqgW9KG5PB8_lAMMaf3MZIGRhsViuM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9oZWxw/aHViLnBvdmVydHls/YXcub3JnL2ltYWdl/cy9sb2dvLnBuZw" alt="Logo">
@@ -15,22 +16,24 @@
       </div>
     </div>
 
+    <!-- nav -->
     <nav>
       | <a href="index.html">Home</a> |
       <a href="CharityList.html">Charity List</a> |
       <a href="contact.html">Contact Us</a> |
     </nav>
 
+    <!-- Content -->
     <h1>The Salvation Army</h1>
 
 <div class="charity-info">
     <img src="https://imgs.search.brave.com/UtN3MWTfKgtJM9zO7kUGB_n6dr3nKww0BvviNct7p1Y/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dGhlY3VsbGVuZm91/bmRhdGlvbi5vcmcv/X2NhY2hlL2dhbGxl/cnlfbGFyZ2UvY29u/dGVudC9pbWFnZXMv/aW1hZ2UtZ2FsbGVy/eS9hbGJ1bS0xL1Nh/bHZhdGlvbiUyMEFy/bXklMjBTaGllbGQl/MjBMb2dvJTIwdHJh/bnNwYXJlbnQucG5n" alt="Salvation Army Logo" class="charity-logo">
     <div class="charity-description">
-        <p>
+        <p class="content">
             The Salvation Army is a Christian charity that supports people facing poverty, homelessness, addiction, and other challenges. It provides emergency shelter, meals, disaster relief, addiction recovery programs, and more.
             The organization is active in over 130 countries and works to meet both material and spiritual needs.
         </p>
-        <p>
+        <p class="content">
             <a href="https://www.salvationarmyusa.org/" target="_blank">Visit Official Website</a>
         </p>
     </div>
@@ -38,12 +41,32 @@
 
 <div class="volunteer-section">
     <form class="volunteer-form">
+       <!-- <label for="email">Want to help? Enter your email:</label><br>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required> -->
         <button type="submit" class="volunteer-btn">Volunteer Now</button>
     </form>
 </div>
     
       
-     
+     <script> 
+      // Logic for filter
+      document.getElementById('filterInput').addEventListener('input', function() {
+        const query = this.value.trim().toLowerCase();
+        const regex = new RegExp(query, 'gi');
+        
+        document.querySelectorAll('.content').forEach(element => {
+          const originalText = element.textContent; 
+          
+          if (query) {
+            element.innerHTML = originalText.replace(regex, match => {
+              return `<span class="highlight">${match}</span>`;
+            });
+          } else {
+            element.innerHTML = originalText;
+          }
+        });
+      });
+    </script>
     
   </body>
 </html>
