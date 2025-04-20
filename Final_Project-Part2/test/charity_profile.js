@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const extraInfo = document.createElement("p");
-  extraInfo.textContent = "We also offer training for volunteers!";
+  extraInfo.textContent = "Don't forget to contact us if you have any questions!";
   extraInfo.style.display = "none";
   extraInfo.style.fontStyle = "italic";
   document.querySelector(".charity-description").appendChild(extraInfo);
