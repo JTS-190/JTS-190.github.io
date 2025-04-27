@@ -1,3 +1,6 @@
+const apiKey = 'pub_83298f7612148e1c89826d1648e3c204b6733';
+const apiUrl = `https://newsdata.io/api/1/news?apikey=${apiKey}&q=charity&language=en`;
+
 fetch(apiUrl)
   .then(response => {
     if (!response.ok) {
