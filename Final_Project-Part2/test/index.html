@@ -38,6 +38,45 @@
         </div>
 
 
-    
+<div id="news-section">
+  <h2>Latest Charity News</h2>
+  <ul id="news-list"></ul>
+</div>
+
+<script>
+  const apiKey = 'pub_83298f7612148e1c89826d1648e3c204b6733';
+  const apiUrl = `https://newsdata.io/api/1/news?apikey=${apiKey}&q=charity&language=en`;
+
+  fetch(apiUrl)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      const newsList = document.getElementById('news-list');
+      
+      // Clear any existing content
+      newsList.innerHTML = '';
+
+      // Check if there are articles
+      if (data.results && data.results.length > 0) {
+        data.results.slice(0, 5).forEach(article => { // Limit to 5 articles
+          const listItem = document.createElement('li');
+          listItem.innerHTML = `<a href="${article.link}" target="_blank">${article.title}</a>`;
+          newsList.appendChild(listItem);
+        });
+      } else {
+        newsList.innerHTML = '<li>No charity news available at the moment.</li>';
+      }
+    })
+    .catch(error => {
+      const newsSection = document.getElementById('news-section');
+      newsSection.innerHTML = '<p>Unable to load news at the moment. Please try again later.</p>';
+      console.error('Error fetching news:', error);
+    });
+</script>
+
   </body>
 </html>
