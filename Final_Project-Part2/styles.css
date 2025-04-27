@@ -267,19 +267,13 @@ td {
 .index-list a:hover {
     text-decoration: underline;
 }
-/* news */
-#news-section {
+.news-section {
     max-width: 1200px;
     margin: 20px auto;
     background-color: #F0F0F0;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    text-align: center;
-    color: #1A2A3D;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .news-article {
