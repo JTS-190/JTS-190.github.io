@@ -6,7 +6,6 @@
   </head>
   <body>
 
-    <!-- top bar with logo and search -->
     <div class="top-bar">
       <div class="logo">
         <img src="https://imgs.search.brave.com/iccmCPYs3Jbh3PqgW9KG5PB8_lAMMaf3MZIGRhsViuM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9oZWxw/aHViLnBvdmVydHls/YXcub3JnL2ltYWdl/cy9sb2dvLnBuZw" alt="Logo">
@@ -16,14 +15,12 @@
       </div>
     </div>
 
-    <!-- navigation -->
     <nav>
       | <a href="index.html">Home</a> |
       <a href="CharityList.html">Charity List</a> |
       <a href="contact.html">Contact Us</a> |
     </nav>
 
-    <!-- content -->
     <h1>The Red Cross</h1>
 
 <div class="charity-info">
@@ -41,15 +38,14 @@
 
 <div class="volunteer-section">
     <form class="volunteer-form">
-       <!-- <label for="email">Want to help? Enter your email:</label><br>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required> -->
-        <button type="submit" class="volunteer-btn">Volunteer Now</button> 
+        <button type="button" id="volunteerBtn" class="volunteer-btn">Volunteer Now</button>
     </form>
 </div>
+
+<script src="charity_profile.js"></script>
     
       
      <script> 
-      // Logic for filter
       document.getElementById('filterInput').addEventListener('input', function() {
         const query = this.value.trim().toLowerCase();
         const regex = new RegExp(query, 'gi');

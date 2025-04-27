@@ -267,3 +267,44 @@ td {
 .index-list a:hover {
     text-decoration: underline;
 }
+.news-section {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #F0F0F0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.news-article {
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+}
+
+.news-article:last-child {
+    border-bottom: none;
+}
+
+.news-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1A2A3D;
+    margin-bottom: 5px;
+}
+
+.news-description {
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.news-link {
+    font-size: 14px;
+    color: #3498db;
+    text-decoration: none;
+}
+
+.news-link:hover {
+    text-decoration: underline;
+}

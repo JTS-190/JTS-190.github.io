@@ -6,7 +6,6 @@
   </head>
   <body>
 
-    <!-- top bar with logo and search -->
     <div class="top-bar">
       <div class="logo">
         <img src="https://imgs.search.brave.com/iccmCPYs3Jbh3PqgW9KG5PB8_lAMMaf3MZIGRhsViuM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9oZWxw/aHViLnBvdmVydHls/YXcub3JnL2ltYWdl/cy9sb2dvLnBuZw" alt="Logo">
@@ -16,14 +15,12 @@
       </div>
     </div>
 
-    <!-- navigation -->
     <nav>
       | <a href="index.html">Home</a> |
       <a href="CharityList.html">Charity List</a> |
       <a href="contact.html">Contact Us</a> |
     </nav>
 
-    <!-- content -->
     <h1>Welcome to HelpHub!</h1>
 
     <div class="index-content">
@@ -31,34 +28,59 @@
         HelpHub is a platform designed to connect individuals with charitable organizations in need of support. We offer information on various charities, volunteer opportunities, and ways you can make a difference in your community. Whether you’re looking to donate, volunteer, or just learn more about charitable work, you’ll find everything you need right here.
       </p>
 
-      <div class="explore-box">
-        <p class="explore-text">Explore the following sections to get started:</p>
-        <ul class="index-list">
-          <li><a href="CharityList.html">Charity List</a> – Discover various organizations in need of donations and volunteers.</li>
-          <li><a href="contact.html">Contact Us</a> – Reach out to us for more information or inquiries.</li>
-        </ul>
-      </div>
-    </div>
-    
-    <script> 
-      // Logic for filter
-      document.getElementById('filterInput').addEventListener('input', function() {
-        const query = this.value.trim().toLowerCase();
-        const regex = new RegExp(query, 'gi');
-        
-        document.querySelectorAll('.content').forEach(element => {
-          const originalText = element.textContent; 
-          
-          if (query) {
-            element.innerHTML = originalText.replace(regex, match => {
-              return `<span class="highlight">${match}</span>`;
-            });
-          } else {
-            element.innerHTML = originalText;
-          }
+          <div class="explore-box">
+            <p class="explore-text">Explore the following sections to get started:</p>
+            <ul class="index-list">
+              <li><a href="CharityList.html">Charity List</a> – Discover various organizations in need of donations and volunteers.</li>
+              <li><a href="contact.html">Contact Us</a> – Reach out to us for more information or inquiries.</li>
+            </ul>
+          </div>
+        </div>
+
+
+<div id="news-section" class="news-section">
+  <h2 style="text-align: center; color: #1A2A3D;">Latest Charity News</h2>
+  <ul id="news-list" style="list-style-type: none; padding: 0;"></ul>
+</div>
+
+<script>
+  const apiKey = 'pub_83298f7612148e1c89826d1648e3c204b6733';
+  const apiUrl = `https://newsdata.io/api/1/news?apikey=${apiKey}&q=charity%20OR%20nonprofit%20OR%20donation%20OR%20fundraiser&language=en`;
+
+  fetch(apiUrl)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      const newsList = document.getElementById('news-list');
+      
+      newsList.innerHTML = '';
+
+      if (data.results && data.results.length > 0) {
+        data.results.slice(0, 5).forEach(article => {
+          const listItem = document.createElement('li');
+          listItem.className = 'news-article';
+          listItem.innerHTML = `
+            <div class="news-title">${article.title}</div>
+            <div class="news-description">${article.description || 'No description available.'}</div>
+            <a class="news-link" href="${article.link}" target="_blank">Read more</a>
+          `;
+          newsList.appendChild(listItem);
         });
-      });
-    </script>
-    
+      } else {
+        newsList.innerHTML = '<li>No charity news available at the moment.</li>';
+      }
+    })
+    .catch(error => {
+      const newsSection = document.getElementById('news-section');
+      newsSection.innerHTML = '<p>Unable to load news at the moment. Please try again later.</p>';
+      console.error('Error fetching news:', error);
+    });
+</script>
+
+
   </body>
 </html>
